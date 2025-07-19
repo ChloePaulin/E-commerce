@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+}
+
+#fleche{
+  max-width: 3em;
+  text-align: right;
+}
+
+body {
+    background: #eeaeca;
+    background: linear-gradient(
+      3deg,
+      rgba(238, 174, 202, 1) 0%,
+      rgba(148, 187, 233, 1) 100%
+    );
+    background-repeat: no-repeat;
+}
+
+h1,
+h2,
+h4 {
+  padding-bottom: 0.7em;
+  font-family: "Indie Flower", cursive;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+    padding: 0.7em;
+}
+
+p {
+  font-family: "Delius", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.category {
+  color: rgb(50, 94, 170);
+  padding-bottom: 0.25em;
+}
+
+#section1 {
+  border: 5px solid rgba(28, 110, 164, 0.2);
+  border-radius: 10px;
+  margin: 2em;
+  padding: 2em;
+  text-align: center;
+}
+
+#categorylist,
+#productList {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding : 1em;
+  margin : 1em;
+  line-height: 1.5em;
+}
+
+footer{
+  display: flex;
+  justify-content: flex-end;
+  padding: 0.7em;
+}
