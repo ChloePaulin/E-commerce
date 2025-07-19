@@ -1,12 +1,12 @@
 // Afficher chaque ligne dans un paragraphe sur la page index
 function afficherListeCategories(categories){
-    container = document.getElementById("categorylist");
-    container.innerHTML = "";
+    accueilContainer = document.getElementById("categorylist");
+    accueilContainer.innerHTML = "";
     categories.forEach(category => {
         const p = document.createElement('p');
         p.className = "category";
         p.innerHTML=`<a class="url" id="${category.name}" href="pageProduits.html?slug=${category.slug}">${category.name}</a>`;
-        container.appendChild(p);
+        accueilContainer.appendChild(p);
     });
 }
 // Récupérer les données de l'API et les afficher sur la page avec afficherListeProduits()
@@ -22,7 +22,9 @@ async function recupUrlJSON(url){
         afficherListeCategories(listeProduits);
     }
     catch (error){
-        container = document.getElementById("listeProduits");
-        container.innerHTML = "<p>Erreur de chargement de la liste.</p>";
+        accueilContainer = document.getElementById("listeProduits");
+        accueilContainer.innerHTML = "<p>Erreur de chargement de la liste.</p>";
     }
 }
+
+recupUrlJSON("https://dummyjson.com/products/categories");
