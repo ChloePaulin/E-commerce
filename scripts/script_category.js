@@ -9,7 +9,7 @@ function afficherListeProduits(products) {
         <h4>${product.title}</h4>
         <p>Prix : ${product.price}</p>
         <p>Note : <span class="etoiles">${genererEtoiles(product.rating)}</span></p>
-        <button class="bouton-detail"><a href="detailsProduit.html?id=${product.id}">Voir le produit</a></button>`;
+        <a href="detailsProduit.html?id=${product.id}"><button class="bouton-detail">Voir le produit</button></a>`;
     categoryContainer.appendChild(div);
   });
 }
